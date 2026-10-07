@@ -20,7 +20,8 @@ To work from a clone instead:
     tern plugin link tern-mizu
 
 Tern reloads the daemon's plugins on install or link, and watches the
-plugin folder afterwards. Remove it with `tern plugin remove mizu-icons`.
+plugin folder afterwards. Remove it with `tern plugin unlink mizu-icons`
+after a link, or `tern plugin remove mizu-icons` after an install.
 
 ## Usage
 
@@ -32,7 +33,8 @@ remote roots alike, wherever Tern's `.ft-ic` attributes reach.
 The sheet follows VS Code's lookup order, from most to least specific:
 
 1. exact file name (`fileNames`)
-2. longest extension suffix, so `archive.tar.gz` uses the `tar.gz` icon
+2. longest extension suffix, so `types.d.ts` uses the `.d.ts` icon instead
+   of the plain TypeScript one
 3. extension (`fileExtensions`)
 4. the defaults `file`, `folder` and `folderExpanded`
 
