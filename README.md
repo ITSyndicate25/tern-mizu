@@ -8,9 +8,13 @@ can paint the icon box with an SVG from the plugin directory. This plugin
 turns that hook into the full Mizu set: 893 icons covering 847 file names,
 947 extensions and 1457 folder names.
 
-## Install
+## Requirements
 
-Tern 0.5.3 or later has the Files-pane icon hooks.
+- Tern 0.5.3 or later, for the Files-pane icon hooks.
+- Nothing else: the package is a generated sheet plus the SVG files, with
+  no runtime code of its own and no network use once installed.
+
+## Install
 
     tern plugin install github.com/ITSyndicate25/tern-mizu
 
@@ -20,13 +24,25 @@ To work from a clone instead:
     tern plugin link tern-mizu
 
 Tern reloads the daemon's plugins on install or link, and watches the
-plugin folder afterwards. Remove it with `tern plugin unlink mizu-icons`
-after a link, or `tern plugin remove mizu-icons` after an install.
+plugin folder afterwards. Check it loaded:
+
+    tern plugin list
+    # mizu-icons 2.10.1 Mizu Icons — 0 blocks, 0 lenses, window  ready
+
+A package that cannot load prints a `problem` line with the reason instead.
+
+Remove it with `tern plugin unlink mizu-icons` after a link, or
+`tern plugin remove mizu-icons` after an install.
 
 ## Usage
 
-Nothing to configure. The sheet applies to every Files pane, local and
-remote roots alike, wherever Tern's `.ft-ic` attributes reach.
+Nothing to configure. Open a Files pane and the sheet applies to every
+pane, local and remote roots alike, wherever Tern's `.ft-ic` attributes
+reach.
+
+Icons still the defaults? Check, in order: `tern plugin list` says `ready`
+(not `disabled` or `failed`), Preferences › Plugins shows the plugin on,
+and Tern is 0.5.3 or later.
 
 ## Icon resolution
 
