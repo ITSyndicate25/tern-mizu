@@ -1,0 +1,3 @@
+-- Mizu Icons styles the Files pane from mizu.css, declared in plugin.toml's
+-- `styles`. A package must name a host or window entry, so this file exists
+-- to satisfy that rule; it runs and registers nothing.

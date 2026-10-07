@@ -1,0 +1,7 @@
+schema = 1
+id = "mizu-icons"
+name = "Mizu Icons"
+version = "2.10.1"
+description = "VS Code Mizu icon theme for the Files pane."
+window = "window.luau"
+styles = ["mizu.css"]
