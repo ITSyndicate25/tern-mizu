@@ -1,12 +1,9 @@
-# tern-mizu
+# Tern Mizu Icons
 
-Mizu Icons, the VS Code file icon theme, painted over Tern's Files pane.
-
-Tern lets a plugin sheet restyle the file tree: every row and icon box
-carries `data-name`, `data-ext`, `data-kind` and `data-open`, and a sheet
-can paint the icon box with an SVG from the plugin directory. This plugin
-turns that hook into the full Mizu set: 893 icons covering 847 file names,
-947 extensions and 1457 folder names.
+A [Tern](https://stencil.so/tern) plugin that paints
+[Mizu Icons](https://github.com/m39u/mizu), the VS Code file icon theme, over
+Tern's Files pane: 893 icons covering 847 file names, 947 extensions and
+1457 folder names.
 
 ## Requirements
 
@@ -36,17 +33,19 @@ Remove it with `tern plugin unlink mizu-icons` after a link, or
 
 ## Usage
 
-Nothing to configure. Open a Files pane and the sheet applies to every
-pane, local and remote roots alike, wherever Tern's `.ft-ic` attributes
-reach.
+Nothing to configure. Open a Files pane and the sheet applies to every pane,
+local and remote roots alike, wherever Tern's `.ft-ic` attributes reach.
 
 Icons still the defaults? Check, in order: `tern plugin list` says `ready`
 (not `disabled` or `failed`), Preferences › Plugins shows the plugin on,
 and Tern is 0.5.3 or later.
 
-## Icon resolution
+## How it works
 
-The sheet follows VS Code's lookup order, from most to least specific:
+Tern lets a plugin sheet restyle the file tree: every row and icon box
+carries `data-name`, `data-ext`, `data-kind` and `data-open`, and a sheet
+can paint the icon box with an SVG from the plugin directory. The sheet
+follows VS Code's lookup order, from most to least specific:
 
 1. exact file name (`fileNames`)
 2. longest extension suffix, so `types.d.ts` uses the `.d.ts` icon instead
@@ -88,15 +87,14 @@ reads either the old or the new package, never a half-written one.
 
 ## Credits
 
-The icons and the name/extension mapping come from
-[Mizu Icons](https://github.com/m39u/mizu), MIT licensed. The sheet was
-generated from the `cdfzo.mizu-2.10.1` VS Code extension.
-
-The plugin format and the Files-pane hooks belong to
-[Stencil Tern](https://stencil.so/tern); see the
-[plugin docs](https://docs.stencil.so/tern/).
+- [Mizu Icons](https://github.com/m39u/mizu) by m39u — the icons and the
+  name/extension mapping, MIT licensed; generated from the
+  `cdfzo.mizu-2.10.1` VS Code extension.
+- [Stencil Tern](https://stencil.so/tern) — the plugin format, the Files
+  pane and the icon hooks; see the
+  [plugin docs](https://docs.stencil.so/tern/).
 
 ## License
 
-MIT, see `LICENSE`. The bundled icons keep their upstream license in
-`LICENSE.txt`.
+MIT, see [LICENSE](LICENSE). The bundled icons keep their upstream license
+in [LICENSE.txt](LICENSE.txt).
