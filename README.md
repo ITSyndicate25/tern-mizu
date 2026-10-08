@@ -96,5 +96,4 @@ reads either the old or the new package, never a half-written one.
 
 ## License
 
-MIT, see [LICENSE](LICENSE). The bundled icons keep their upstream license
-in [LICENSE.txt](LICENSE.txt).
+MIT, see [LICENSE](LICENSE).
