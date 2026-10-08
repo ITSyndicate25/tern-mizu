@@ -67,7 +67,6 @@ under Tern's 256 KiB cap for manifest styles.
 | `window.luau` | Empty entry. A package must name a host or window entry. |
 | `tools/gen.mjs` | Regenerates the sheet and the icons. |
 | `LICENSE` | MIT, this repository. |
-| `LICENSE.txt` | MIT, the upstream Mizu icons. |
 
 ## Regenerating
 
